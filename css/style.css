@@ -1152,9 +1152,8 @@ a:hover {
 .cover-v1 .heading {
   font-size: 5rem;
   font-weight: 900;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  background-color: rgba(255, 255, 255, 0.5);
+  color: oklch(85% 0.1 0);
+  text-shadow: 0 0.15ch 15px oklch(25% 0.2 0), 0 -2px 0 oklch(98% 0.05 0);
 }
 
 @media (max-width: 991.98px) {
@@ -1670,7 +1669,6 @@ figure.dotted-bg:before {
   padding-right: 60px !important;
   padding-left: 60px !important;
 }
-
 @media (max-width: 991.98px) {
   .gutter-v3 > .col,
   .gutter-v3 > [class*="col-"] {
@@ -2551,6 +2549,8 @@ span.error {
   margin-bottom: 10px;
 }
 
-.services__item {
-  margin-bottom: 16px;
+@media (min-width: 768px) {
+  .services > [class*="col-"]:not(:first-child) {
+    border-left: 1px solid #222;
+  }
 }
